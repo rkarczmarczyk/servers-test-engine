@@ -1,0 +1,6 @@
+version: '2'
+services:
+  servers:
+    image: java:7
+  apachebenchmark:
+    image: java:7
