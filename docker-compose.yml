@@ -4,3 +4,5 @@ services:
     image: java:7
   apachebenchmark:
     image: java:7
+  gatling:
+    image: java:7
