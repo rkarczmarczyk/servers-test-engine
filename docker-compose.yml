@@ -1,8 +1,9 @@
 version: '2'
 services:
   servers:
-    image: java:7
-  apachebenchmark:
-    image: java:7
-  gatling:
-    image: java:7
+    build: ./Servers
+    ports:
+     - "8081:8081"
+     - "8091:8091"
+     - "8100:8100" 
+     - "8101:8101"
