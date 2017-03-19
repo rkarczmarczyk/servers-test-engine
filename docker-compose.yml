@@ -1,9 +1,19 @@
 version: '2'
 services:
-  servers:
-    build: ./Servers
+  test_volume:
+    image: ubuntu:14.04
+    volumes:
+      - ./shared:/data:ro
+  nginx:
+    build: ./nginx
     ports:
-     - "8081:8081"
-     - "8091:8091"
-     - "8100:8100" 
-     - "8101:8101"
+     - "8081:80"
+    volumes_from:
+     - test_volume
+  httpd:
+    build: ./httpd
+    ports:
+     - "8091:80"
+    volumes_from:
+     - test_volume
+
