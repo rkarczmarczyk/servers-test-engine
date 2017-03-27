@@ -4,6 +4,10 @@ services:
     image: ubuntu:14.04
     volumes:
       - ./shared:/data:ro
+  result_volume:
+      image: ubuntu:14.04
+      volumes:
+        - ./results:/results
   nginx:
     build: ./nginx
     ports:
@@ -16,4 +20,18 @@ services:
      - "8091:80"
     volumes_from:
      - test_volume
+  gwan:
+      build: ./gwan
+      ports:
+       - "8101:80"
+      volumes_from:
+       - test_volume
+  ab:
+    build: ./ab
+    environment:
+      - NUMBER_OF_USERS=${NUMBER_OF_USERS}
+      - REQUESTS_COUNT=${REQUESTS_COUNT}
+    volumes_from:
+     - test_volume
+     - result_volume
 

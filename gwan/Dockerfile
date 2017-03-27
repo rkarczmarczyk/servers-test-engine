@@ -1,4 +1,4 @@
-FROM nginx:1.11.10
+FROM retailify/docker-gwan
 
 #Environment
 EXPOSE 80

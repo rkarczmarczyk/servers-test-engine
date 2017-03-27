@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/data/scripts/loadPage.sh /usr/share/nginx/html/nginx
+/data/scripts/loadPage.sh /usr/share/nginx/html
 service nginx start
 
 sleep infinity

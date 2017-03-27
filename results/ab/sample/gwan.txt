@@ -1,0 +1,54 @@
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking gwan (be patient)
+Completed 20000 requests
+Completed 40000 requests
+Completed 60000 requests
+Completed 80000 requests
+Completed 100000 requests
+Completed 120000 requests
+Completed 140000 requests
+Completed 160000 requests
+Completed 180000 requests
+Completed 200000 requests
+Finished 200000 requests
+
+
+Server Software:        G-WAN
+Server Hostname:        gwan
+Server Port:            80
+
+Document Path:          /test.txt
+Document Length:        315 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   12.539 seconds
+Complete requests:      200000
+Failed requests:        0
+Non-2xx responses:      200000
+Total transferred:      94600000 bytes
+HTML transferred:       63000000 bytes
+Requests per second:    15950.54 [#/sec] (mean)
+Time per request:       62.694 [ms] (mean)
+Time per request:       0.063 [ms] (mean, across all concurrent requests)
+Transfer rate:          7367.78 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   33 112.9     27    3028
+Processing:     3   29  13.2     30     423
+Waiting:        3   21  12.1     21     419
+Total:         12   63 117.3     60    3068
+
+Percentage of the requests served within a certain time (ms)
+  50%     60
+  66%     64
+  75%     65
+  80%     66
+  90%     69
+  95%     71
+  98%     73
+  99%     76
+ 100%   3068 (longest request)
