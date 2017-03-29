@@ -1,3 +1,6 @@
 http,nginx,80
 http,httpd,80
 http,gwan,80
+http,litespeed,80
+https,nginx_http2,443
+http,nginx_varnish,6081

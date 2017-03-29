@@ -14,6 +14,18 @@ services:
      - "8081:80"
     volumes_from:
      - test_volume
+  nginx_http2:
+        build: ./nginx_http2
+        ports:
+         - "8453:443"
+        volumes_from:
+         - test_volume
+  nginx_varnish:
+    build: ./nginx_varnish
+    ports:
+      - "8121:6081"
+    volumes_from:
+      - test_volume
   httpd:
     build: ./httpd
     ports:
@@ -24,6 +36,12 @@ services:
       build: ./gwan
       ports:
        - "8101:80"
+      volumes_from:
+       - test_volume
+  litespeed:
+      build: ./litespeed
+      ports:
+        - "8111:80"
       volumes_from:
        - test_volume
   ab:

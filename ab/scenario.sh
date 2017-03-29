@@ -2,7 +2,7 @@
 #set -o pipefail
 #trap 'echo "$BASH_SOURCE: ${FUNCNAME[0]:-line} $LINENO: ABORTED ON ERROR" 1>&2; exit 1' ERR
 
-RESULT_DIR="/results/ab/$(date +%Y_%m_%d-%H_%M_%S)"
+RESULT_DIR="/results/ab/$(date +%Y_%m_%d-%H_%M_%S)_threads_${NUMBER_OF_USERS}_requests_${REQUESTS_COUNT}"
 echo "Create dir $RESULT_DIR"
 mkdir -p $RESULT_DIR
 
